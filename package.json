@@ -1,0 +1,17 @@
+{
+  "name": "threat-detection",
+  "version": "1.0.0",
+  "description": "Near Real-Time Threat Detection Assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jatin Kapil",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "method-override": "^2.3.8",
+    "multer": "^1.3.0"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="threatDetectionApp">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand">Threat Detection App</a>
+        </div>
+    </nav>
+    <div ng-controller="HomeController">
+        <div class="jumbotron text-center">
+            <br />
+            <h2>The Assignment</h2>
+            <p>This app demonstrates the implementation of <br/>
+                <span class="text-danger">Near-Real Time Threat Detection.</span></p>
+            <br/>
+        </div>
+        {{message}}
+
+        <center>
+            <form action="/api/upload" method="post" enctype="multipart/form-data">
+                <div class="file-field">
+                    <div class="btn btn-outline-primary waves-effect">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                    </div>
+                </div><br>
+                <input type="submit" class="btn btn-primary waves-effect" value="Upload" name="submit">
+            </form>
+        </center><br>
+        <div ng-show="error" class="alert alert-danger" id="error">
+            {{error}}
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container text-center">
+            <p>An app by <a href="https://in.linkedin.com/in/jatin-kapil" target="_blank">Jatin Kapil</a></p>
+            <p>Glance over my other other projects at <a href="https://github.com/JatinKapil" target="_blank">GitHub</a></p>
+        </div>
+    </nav>
+
+</body>
+
+</html>
